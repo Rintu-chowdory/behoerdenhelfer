@@ -1,0 +1,8 @@
+{
+  "routes": [
+    { "path": "/", "title": "Behördenhelfer" },
+    { "path": "/checklist-generator", "title": "Checklisten-Generator" },
+    { "path": "/document-explainer", "title": "Dokument-Erklärer" },
+    { "path": "/deadline-reminders", "title": "Fristen-Manager" }
+  ]
+}

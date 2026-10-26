@@ -179,14 +179,70 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right Image */}
+            {/* Product preview: kept self-contained so the hero never depends on a remote asset */}
             <div className="relative hidden md:block">
-              <div className="relative w-full aspect-square">
-                <img
-                  src="https://d2xsxph8kpxj0f.cloudfront.net/310519663511224854/Hieb3sfsz5eXqDVHfDSYSN/hero-bureaucracy-Fc4Q7XQTxrCdWRVUJk4xgL.webp"
-                  alt="German Bureaucracy Helper"
-                  className="w-full h-full object-cover rounded-2xl shadow-lg"
-                />
+              <div
+                role="img"
+                aria-label="Beispielansicht des Behördenhelfers mit Checkliste, Dokumenten und Fristen"
+                className="relative w-full aspect-square max-w-xl ml-auto overflow-hidden rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-100 via-white to-slate-100 p-6 shadow-lg"
+              >
+                <div className="absolute -right-16 -top-16 h-48 w-48 rounded-full bg-blue-200/50 blur-2xl" />
+                <div className="absolute -bottom-20 -left-12 h-48 w-48 rounded-full bg-indigo-200/40 blur-2xl" />
+                <div className="relative h-full rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
+                  <div className="mb-6 flex items-center justify-between border-b border-slate-100 pb-4">
+                    <div className="flex items-center gap-2">
+                      <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-700 text-sm font-bold text-white">
+                        §
+                      </div>
+                      <div>
+                        <p className="text-xs font-semibold text-slate-900">Behördenhelfer</p>
+                        <p className="text-[10px] text-slate-400">Ihre Übersicht</p>
+                      </div>
+                    </div>
+                    <div className="h-2 w-2 rounded-full bg-emerald-500" />
+                  </div>
+
+                  <div className="mb-5 flex items-end justify-between">
+                    <div>
+                      <p className="text-xs font-medium text-slate-500">Guten Morgen</p>
+                      <p className="text-xl font-bold text-slate-900">Ihre nächsten Schritte</p>
+                    </div>
+                    <span className="rounded-full bg-blue-50 px-2 py-1 text-[10px] font-semibold text-blue-700">
+                      68% fertig
+                    </span>
+                  </div>
+
+                  <div className="mb-5 h-2 overflow-hidden rounded-full bg-slate-100">
+                    <div className="h-full w-[68%] rounded-full bg-blue-600" />
+                  </div>
+
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-3 rounded-lg border border-emerald-100 bg-emerald-50/70 p-3">
+                      <CheckCircle2 className="h-5 w-5 shrink-0 text-emerald-600" />
+                      <div className="min-w-0 flex-1">
+                        <p className="truncate text-xs font-semibold text-slate-800">Wohnanmeldung vorbereiten</p>
+                        <p className="text-[10px] text-slate-500">3 von 3 Aufgaben erledigt</p>
+                      </div>
+                      <span className="text-[10px] font-semibold text-emerald-700">Fertig</span>
+                    </div>
+                    <div className="flex items-center gap-3 rounded-lg border border-blue-100 bg-blue-50/70 p-3">
+                      <FileText className="h-5 w-5 shrink-0 text-blue-600" />
+                      <div className="min-w-0 flex-1">
+                        <p className="truncate text-xs font-semibold text-slate-800">Mietvertrag verstehen</p>
+                        <p className="text-[10px] text-slate-500">5 Abschnitte erklärt</p>
+                      </div>
+                      <span className="text-[10px] font-semibold text-blue-700">Öffnen</span>
+                    </div>
+                    <div className="flex items-center gap-3 rounded-lg border border-amber-100 bg-amber-50/70 p-3">
+                      <Clock className="h-5 w-5 shrink-0 text-amber-600" />
+                      <div className="min-w-0 flex-1">
+                        <p className="truncate text-xs font-semibold text-slate-800">Krankenversicherung</p>
+                        <p className="text-[10px] text-slate-500">Frist in 2 Tagen</p>
+                      </div>
+                      <span className="text-[10px] font-semibold text-amber-700">Dringend</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
